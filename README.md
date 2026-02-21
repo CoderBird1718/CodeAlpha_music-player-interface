@@ -8,9 +8,9 @@ A **Mahabharata-themed music streaming web app** — think Spotify, but set in t
 ---
 
 ##  Live Preview
+https://coderbird1718.github.io/CodeAlpha_music-player-interface/
 
 ---
-
 ##  Features
 
 ###  Music Player
