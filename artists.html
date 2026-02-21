@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dharma Player · Artists</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600;700&family=IM+Fell+English:ital@0;1&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="sidebar-overlay"></div>
+<aside class="sidebar">
+  <div class="sidebar-logo">
+    <div class="chakra-wrap">
+      <svg class="chakra-svg" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="46" class="chakra-ring" stroke-width="2"/>
+        <circle cx="50" cy="50" r="8" class="chakra-center"/>
+        <g stroke="#e8b84b" stroke-width="1.2" opacity="0.9">
+          <line x1="50" y1="4" x2="50" y2="96"/><line x1="4" y1="50" x2="96" y2="50"/>
+          <line x1="17.5" y1="17.5" x2="82.5" y2="82.5"/><line x1="82.5" y1="17.5" x2="17.5" y2="82.5"/>
+          <line x1="50" y1="4" x2="50" y2="96" transform="rotate(22.5 50 50)"/>
+          <line x1="4" y1="50" x2="96" y2="50" transform="rotate(22.5 50 50)"/>
+          <line x1="17.5" y1="17.5" x2="82.5" y2="82.5" transform="rotate(22.5 50 50)"/>
+          <line x1="82.5" y1="17.5" x2="17.5" y2="82.5" transform="rotate(22.5 50 50)"/>
+        </g>
+        <g fill="#e8b84b" opacity="0.7">
+          <polygon points="50,2 53,10 47,10" transform="rotate(0 50 50)"/>
+          <polygon points="50,2 53,10 47,10" transform="rotate(45 50 50)"/>
+          <polygon points="50,2 53,10 47,10" transform="rotate(90 50 50)"/>
+          <polygon points="50,2 53,10 47,10" transform="rotate(135 50 50)"/>
+          <polygon points="50,2 53,10 47,10" transform="rotate(180 50 50)"/>
+          <polygon points="50,2 53,10 47,10" transform="rotate(225 50 50)"/>
+          <polygon points="50,2 53,10 47,10" transform="rotate(270 50 50)"/>
+          <polygon points="50,2 53,10 47,10" transform="rotate(315 50 50)"/>
+        </g>
+      </svg>
+    </div>
+    <div class="logo-text">Dharma<br>Player</div>
+  </div>
+  <div class="sidebar-search"><span class="search-icon">🔍</span><input type="text" placeholder="Search artists…"></div>
+  <nav class="sidebar-nav">
+    <div class="nav-section-title">Menu</div>
+    <a href="index.html" class="nav-item"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Home</a>
+    <a href="library.html" class="nav-item"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9H9V9h10v2zm-4 4H9v-2h6v2zm4-8H9V5h10v2z"/></svg>Library</a>
+    <a href="artists.html" class="nav-item active"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>Artists</a>
+    <a href="playlist.html" class="nav-item"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M15 6H3v2h12V6zm0 4H3v2h12v-2zM3 16h8v-2H3v2zM17 6v8.18c-.31-.11-.65-.18-1-.18-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3V8h3V6h-5z"/></svg>Playlist</a>
+  </nav>
+  <div class="nav-section-title" style="padding:14px 20px 6px;">Featured</div>
+  <div class="sidebar-library">
+    <div class="lib-item" onclick="DP.playTrack(0)"><img src="https://picsum.photos/seed/bhishma/200/200" alt=""><div class="lib-item-info"><div class="lib-item-name">Kurukshetra</div><div class="lib-item-sub">Epic · 8 songs</div></div></div>
+    <div class="lib-item" onclick="DP.playTrack(4)"><img src="https://picsum.photos/seed/vishnu/200/200" alt=""><div class="lib-item-info"><div class="lib-item-name">Vaikuntha</div><div class="lib-item-sub">Devotional · 5 songs</div></div></div>
+  </div>
+</aside>
+
+<main class="main">
+  <div class="topbar">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <button class="menu-toggle-btn">☰</button>
+      <div class="topbar-nav">
+        <button class="topbar-btn" onclick="history.back()">‹</button>
+        <button class="topbar-btn" onclick="history.forward()">›</button>
+      </div>
+    </div>
+    <div class="topbar-tabs">
+      <button class="tab-btn active" data-filter="all">🏹 All</button>
+      <button class="tab-btn" data-filter="Epic">⚔ Epic</button>
+      <button class="tab-btn" data-filter="Devotional">🕉 Devotional</button>
+      <button class="tab-btn" data-filter="Classical">🎶 Classical</button>
+      <button class="tab-btn" data-filter="Bhakti">💛 Bhakti</button>
+    </div>
+    <div class="topbar-right">
+      <button class="upgrade-btn">⚔ Upgrade</button>
+      <div class="avatar">अ</div>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <div class="page-hero" style="min-height:240px;">
+    <div class="page-hero-bg" style="background:linear-gradient(135deg,#0d1520,#1a0520,#0a1500);"></div>
+    <div class="page-hero-overlay"></div>
+    <svg class="chakra-bg" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="46" fill="none" stroke="#e8b84b" stroke-width="0.5"/>
+      <g stroke="#e8b84b" stroke-width="0.4">
+        <line x1="50" y1="4" x2="50" y2="96"/><line x1="4" y1="50" x2="96" y2="50"/>
+        <line x1="17.5" y1="17.5" x2="82.5" y2="82.5"/><line x1="82.5" y1="17.5" x2="17.5" y2="82.5"/>
+        <line x1="50" y1="4" x2="50" y2="96" transform="rotate(22.5 50 50)"/>
+        <line x1="4" y1="50" x2="96" y2="50" transform="rotate(22.5 50 50)"/>
+      </g>
+    </svg>
+    <div class="page-hero-info">
+      <div class="page-hero-type">🏹 All Artists</div>
+      <div class="page-hero-title">Sacred Voices</div>
+      <div class="page-hero-sub">10 legendary artists of the Mahabharata age — from divine flutists to forgotten warriors</div>
+      <div class="page-hero-meta"><span>10 Artists</span><span>·</span><span>Epic & Devotional</span><span>·</span><span>Ancient India</span></div>
+    </div>
+  </div>
+
+  <div class="verse-quote">
+    <div class="verse-text">"यस्तु सर्वाणि भूतान्यात्मन्येवानुपश्यति। सर्वभूतेषु चात्मानं ततो न विजुगुप्सते।"</div>
+    <div class="verse-source">— Isha Upanishad · 6 · Who sees all beings in the Self</div>
+  </div>
+
+  <div class="content">
+    <div class="section-head">
+      <div class="section-title">🎭 Browse Artists</div>
+      <span style="font-size:11px;color:var(--muted);">Click card to open · Play button to listen</span>
+    </div>
+    <div class="artists-grid" data-render="artists"></div>
+
+    <div class="ornament">✦ ॐ ✦ ॐ ✦</div>
+
+    <div class="section-head">
+      <div class="section-title">📖 Artist Profiles</div>
+    </div>
+    <div id="spotlightList"></div>
+  </div>
+</main>
+
+<footer class="player">
+  <div class="now-playing">
+    <svg class="chakra-mini" viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" fill="none" stroke="#e8b84b" stroke-width="2"/><circle cx="50" cy="50" r="8" fill="#e8b84b"/><g stroke="#e8b84b" stroke-width="1.5"><line x1="50" y1="4" x2="50" y2="96"/><line x1="4" y1="50" x2="96" y2="50"/><line x1="17.5" y1="17.5" x2="82.5" y2="82.5"/><line x1="82.5" y1="17.5" x2="17.5" y2="82.5"/><line x1="50" y1="4" x2="50" y2="96" transform="rotate(22.5 50 50)"/><line x1="4" y1="50" x2="96" y2="50" transform="rotate(22.5 50 50)"/><line x1="17.5" y1="17.5" x2="82.5" y2="82.5" transform="rotate(22.5 50 50)"/><line x1="82.5" y1="17.5" x2="17.5" y2="82.5" transform="rotate(22.5 50 50)"/></g></svg>
+    <img class="np-thumb" src="https://picsum.photos/seed/bhishma/200/200" alt="">
+    <div class="np-info"><div class="np-title">Bhishma's Oath</div><div class="np-artist">Kuru Kingdom</div></div>
+    <button class="np-like">♡</button>
+  </div>
+  <div class="player-controls">
+    <div class="ctrl-btns">
+      <button class="ctrl-btn shuffle"><svg viewBox="0 0 24 24"><path d="M10.59 9.17L5.41 4 4 5.41l5.17 5.17 1.42-1.41zM14.5 4l2.04 2.04L4 18.59 5.41 20 17.96 7.46 20 9.5V4h-5.5zm.33 9.41l-1.41 1.41 3.13 3.13L14.5 20H20v-5.5l-2.04 2.04-3.13-3.13z"/></svg></button>
+      <button class="ctrl-btn prev-btn"><svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg></button>
+      <button class="play-pause-btn"><svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><svg class="pause-icon" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg></button>
+      <button class="ctrl-btn next-btn"><svg viewBox="0 0 24 24"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg></button>
+      <button class="ctrl-btn repeat"><svg viewBox="0 0 24 24"><path d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"/></svg></button>
+    </div>
+    <div class="progress-wrap">
+      <span class="time-label start">0:00</span>
+      <div class="progress-bar"><div class="progress-fill" style="width:0%"><div class="progress-thumb"></div></div></div>
+      <span class="time-label end">4:07</span>
+    </div>
+  </div>
+  <div class="player-right">
+    <button class="ctrl-btn"><svg viewBox="0 0 24 24"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/></svg></button>
+    <div class="vol-wrap"><button class="ctrl-btn vol-icon" style="font-size:17px;">🔊</button><div class="vol-bar"><div class="vol-fill" style="width:70%"></div></div></div>
+  </div>
+</footer>
+
+<script src="player.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(buildSpotlights, 150);
+  // Filter tabs
+  document.querySelectorAll(".topbar-tabs .tab-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".topbar-tabs .tab-btn").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      buildSpotlights(btn.dataset.filter === "all" ? null : btn.dataset.filter);
+    });
+  });
+});
+
+function buildSpotlights(filter) {
+  const list = document.getElementById("spotlightList"); if (!list) return;
+  const artists = typeof ARTISTS !== "undefined" ? ARTISTS : [];
+  const filtered = filter ? artists.filter(a => a.genre.toLowerCase().includes(filter.toLowerCase())) : artists;
+  list.innerHTML = "";
+  filtered.forEach((a, idx) => {
+    const el = document.createElement("div");
+    el.className = "artist-spotlight";
+    el.innerHTML = `
+      <div class="artist-spotlight-img">
+        <div class="artist-spotlight-num">${String(a.id).padStart(2,"0")}</div>
+        <img src="https://picsum.photos/seed/${a.seed}/500/350" alt="${a.name}" loading="lazy">
+      </div>
+      <div class="artist-spotlight-body">
+        <div class="asp-genre">${a.genre}</div>
+        <div class="asp-name">${a.name}</div>
+        <div class="asp-role">${a.role}</div>
+        <div class="asp-desc">${a.description}</div>
+        <div class="asp-quote">${a.quote}</div>
+        <div class="asp-stats">
+          <div class="asp-stat"><div class="asp-stat-num">${a.listeners}</div><div class="asp-stat-label">Listeners</div></div>
+          <div class="asp-stat"><div class="asp-stat-num">${a.followers}</div><div class="asp-stat-label">Followers</div></div>
+          <div class="asp-stat"><div class="asp-stat-num">${a.epics}</div><div class="asp-stat-label">Epics</div></div>
+        </div>
+        <div class="asp-actions">
+          <button class="asp-play-btn" data-aid="${a.id - 1}"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
+          <button class="asp-follow-btn" onclick="followArtist(event,'${a.name}')">Follow</button>
+          <span class="asp-listeners">🎧 ${a.listeners} monthly listeners</span>
+        </div>
+      </div>
+    `;
+    el.querySelector(".asp-play-btn").addEventListener("click", e => { e.stopPropagation(); DP.playArtist(a.id - 1); });
+    el.addEventListener("click", () => window.location.href = `artist.html?id=${a.id}`);
+    list.appendChild(el);
+  });
+  if (!filtered.length) list.innerHTML = `<div style="text-align:center;padding:40px;color:var(--muted);font-family:'IM Fell English',serif;font-style:italic;">No artists in this category.</div>`;
+}
+
+function followArtist(e, name) {
+  e.stopPropagation();
+  const btn = e.target;
+  const following = btn.textContent !== "Follow";
+  btn.textContent = following ? "Follow" : "Following ✓";
+  btn.style.cssText = following ? "" : "color:var(--gold);border-color:var(--gold);";
+  DP.showToast(following ? `Unfollowed ${name}` : `💛 Following ${name}`);
+}
+</script>
+</body>
+</html>
