@@ -1,4 +1,4 @@
-# 🕉 Dharma Player · धर्म प्लेयर
+#  Dharma Player · धर्म प्लेयर
 
 > *"Yada yada hi dharmasya glanir bhavati bharata..."*
 > — Bhagavad Gita 4.7
