@@ -22,22 +22,6 @@ A **Mahabharata-themed music streaming web app** — think Spotify, but set in t
 - **Like/unlike tracks** — persists across sessions via `localStorage`
 - **Now Playing bar** — updates dynamically with track art, title, artist
 
-### 10 Legendary Artists
-Each artist has a full biography, iconic quote, listener stats, genre, and linked tracks:
-
-| # | Artist | Role | Genre |
-|---|--------|------|-------|
-| 1 | **Arjuna** | The Divine Archer | Epic · Battle |
-| 2 | **Krishna** | The Divine Flutist | Divine · Devotional |
-| 3 | **Bhishma** | The Oath-Keeper | Epic · Classical |
-| 4 | **Karna** | The Forgotten Sun-Warrior | Epic · Tragic |
-| 5 | **Draupadi** | The Fire-Born Queen | Classical · Devotional |
-| 6 | **Vishnu** | The Preserver of Worlds | Devotional · Celestial |
-| 7 | **Yudhishthira** | The Dharma Raja | Classical · Devotional |
-| 8 | **Kalidasa** | The Poet of the Ages | Classical · Sanskrit |
-| 9 | **Tansen** | The Raga Master | Hindustani · Classical |
-| 10 | **Mirabai** | The Mystic Singer | Bhakti · Devotional |
-
 ###  Design & Aesthetics
 - **Mahabharata gold + deep purple** colour palette
 - **Sudarshan Chakra** SVG animations — spinning at multiple speeds across the UI
